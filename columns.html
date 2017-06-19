@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>YS发展历史</title>
+		<link rel="stylesheet" href="font-awesome-4.5.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/templatemo-style.css">
+
+	</head>
+
+	<body id="top" class="page-2">
+
+		<div class="tm-navbar-container tm-navbar-container-dark">
+
+			<nav class="navbar navbar-full navbar-fixed-top bg-inverse">
+				<button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#tmNavbar">
+                    &#9776;
+                </button>
+				<div class="collapse navbar-toggleable-sm" id="tmNavbar">
+					<ul class="nav navbar-nav">
+						<li class="nav-item">
+							<a href="index.html" class="nav-link external">返回首页</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+
+		</div>
+
+		<div class="container-fluid">
+
+			<div class="row">
+				<div id="tm-section-1" class="tm-section">
+					<div class="col-md-12">
+						<h1 class="text-xs-center blue-text tm-page-2-title">YS发展历史</h1>
+						<p class="text-xs-center tm-page-2-p tm-page-2-subtitle">
+							1980年，创办人在南马永平开创了一片咖啡园地
+						</p>
+						<img src="img/his_img1.jpg" class="img-fluid tm-banner-img" alt="Image">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div id="tm-section-1" class="tm-section">
+					<div class="col-md-12">
+						<p class="text-xs-center tm-page-2-p tm-page-2-subtitle">
+							1983开始设立厂房，研发，提炼，生产，包装
+						</p>
+						<img src="img/his_img2.jpg" class="img-fluid tm-banner-img" alt="Image">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div id="tm-section-1" class="tm-section">
+					<div class="col-md-12">
+						<p class="text-xs-center tm-page-2-p tm-page-2-subtitle">
+							1990开始成立自己的品牌，在马来西亚建立自己的咖啡王国，并开拓国际市场，出口经营至东南亚及欧美等国家
+						</p>
+						<img src="img/his_img3.jpg" class="img-fluid tm-banner-img" alt="Image">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div id="tm-section-1" class="tm-section">
+					<div class="col-md-12">
+						<p class="text-xs-center tm-page-2-p tm-page-2-subtitle">
+							47年专研经验，不断追求产品精益求精，匠心为你打造一杯好咖啡
+						</p>
+						<img src="img/his_img4.jpg" class="img-fluid tm-banner-img" alt="Image">
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- .container -->
+		<footer class="tm-footer" style="margin-top:50px">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+				<p class="text-xs-center tm-footer-text">Copyright &copy; 2017</p>
+			</div>
+		</footer>
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<!-- jQuery (https://jquery.com/download/) -->
+		<script src="https://www.atlasestateagents.co.uk/javascript/tether.min.js"></script>
+		<!-- Tether for Bootstrap, http://stackoverflow.com/questions/34567939/how-to-fix-the-error-error-bootstrap-tooltips-require-tether-http-github-h -->
+		<script src="js/bootstrap.min.js"></script>
+		<!-- Bootstrap (http://v4-alpha.getbootstrap.com/) -->
+		<script src="js/jquery.singlePageNav.min.js"></script>
+		<!-- Single Page Nav (https://github.com/ChrisWojcik/single-page-nav) -->
+
+		<!-- Templatemo scripts -->
+		<script>
+			$(document).ready(function() {
+
+				var mobileTopOffset = 54;
+				var tabletTopOffset = 74;
+				var desktopTopOffset = 79;
+				var topOffset = desktopTopOffset;
+
+				if($(window).width() <= 767) {
+					topOffset = mobileTopOffset;
+				} else if($(window).width() <= 991) {
+					topOffset = tabletTopOffset;
+				}
+
+				/* Single page nav
+				-----------------------------------------*/
+				$('#tmNavbar').singlePageNav({
+					'currentClass': "active",
+					offset: topOffset,
+					'filter': ':not(.external)'
+				});
+
+				if($(window).width() < 570) {
+					$('.tm-full-width-large-table').addClass('table-responsive');
+				} else {
+					$('.tm-full-width-large-table').removeClass('table-responsive');
+				}
+
+				/* Collapse menu after click 
+				-----------------------------------------*/
+				$('#tmNavbar a').click(function() {
+					$('#tmNavbar').collapse('hide');
+				});
+
+				/* Handle nav offset & table responsive upon window resize
+				--------------------------------------------------------------*/
+				$(window).resize(function() {
+
+					if($(window).width() < 768) {
+						topOffset = mobileTopOffset;
+					} else if($(window).width() <= 991) {
+						topOffset = tabletTopOffset;
+					} else {
+						topOffset = desktopTopOffset;
+					}
+
+					$('#tmNavbar').singlePageNav({
+						'currentClass': "active",
+						offset: topOffset,
+						'filter': ':not(.external)'
+					});
+
+					if($(window).width() < 570) {
+						$('.tm-full-width-large-table').addClass('table-responsive');
+					} else {
+						$('.tm-full-width-large-table').removeClass('table-responsive');
+					}
+				});
+
+			});
+		</script>
+	</body>
+
+</html>
