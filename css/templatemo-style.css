@@ -72,10 +72,10 @@ button:focus { outline: none; }
 	overflow:hidden;
 }
 .tm-intro {
-	background: url(../img/home-bg.jpg) no-repeat;
+	/*background: url(../img/home-bg.jpg) no-repeat;
 	background-attachment: fixed;
 	background-position: left top;
-	background-size: 100% 750px;
+	background-size: 100% 750px;*/
 	color: white;
 	display: -webkit-flex;
 	display: -ms-flexbox;
@@ -89,7 +89,17 @@ button:focus { outline: none; }
 	-webkit-justify-content: flex-end;
 	    -ms-flex-pack: flex-end;
 	        justify-content: flex-end;
-	height: 750px;	
+	position:relative;
+	height:750px;
+	width:100%;
+}
+.tm-intro .bg{
+	position:absolute;
+	height:750px;
+	width:100%;
+	top:0;
+	left:0;
+	z-index:-10;
 }
 
 @media (max-width: 1800px) {

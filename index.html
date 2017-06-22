@@ -57,6 +57,7 @@
 
            <div class="row">
                 <div class="tm-intro">
+                	<img src="img/home-bg.jpg" class="bg">
                     <div class="tm-container text-xs-center tm-section-1-inner">
                     	<a href="#tm-section-2" class="tm-intro-link">Begin</a>    
                     </div> 
@@ -123,47 +124,47 @@
                         <div class="tm-img-grid">
                             <div class="tm-gallery-img-container">
                                 <a href="img/cp1.png" class="tm-gallery-img-link">
-                                    <img src="img/cp1.png" alt="Image" class="img-fluid tm-gallery-img"> <!-- 300x200 -->
+                                    <img src="img/cp1.png" alt="Image" class="img-fluid tm-gallery-img lazy"> <!-- 300x200 -->
                                 </a>
                             </div>
                             <div class="tm-gallery-img-container">
                                 <a href="img/cp2.png" class="tm-gallery-img-link">
-                                    <img src="img/cp2.png" alt="Image" class="img-fluid tm-gallery-img">  
+                                    <img src="img/cp2.png" alt="Image" class="img-fluid tm-gallery-img lazy">  
                                 </a>
                             </div>
                             <div class="tm-gallery-img-container">
                                 <a href="img/cp3.png" class="tm-gallery-img-link">
-                                    <img src="img/cp3.png" alt="Image" class="img-fluid tm-gallery-img">
+                                    <img src="img/cp3.png" alt="Image" class="img-fluid tm-gallery-img lazy">
                                 </a>                           
                             </div>
                             <div class="tm-gallery-img-container">
                                 <a href="img/cp4.png" class="tm-gallery-img-link">
-                                    <img src="img/cp4.png" alt="Image" class="img-fluid tm-gallery-img">
+                                    <img src="img/cp4.png" alt="Image" class="img-fluid tm-gallery-img lazy">
                                 </a>
                             </div>
                             <div class="tm-gallery-img-container">
                                 <a href="img/cp5.png" class="tm-gallery-img-link">
-                                    <img src="img/cp5.png" alt="Image" class="img-fluid tm-gallery-img">
+                                    <img src="img/cp5.png" alt="Image" class="img-fluid tm-gallery-img lazy">
                                 </a>
                             </div>
                             <div class="tm-gallery-img-container">
                                 <a href="img/cp6.png" class="tm-gallery-img-link">
-                                    <img src="img/cp6.png" alt="Image" class="img-fluid tm-gallery-img">
+                                    <img src="img/cp6.png" alt="Image" class="img-fluid tm-gallery-img lazy">
                                 </a>
                             </div>
                             <div class="tm-gallery-img-container">
                                 <a href="img/cp7.png" class="tm-gallery-img-link">
-                                    <img src="img/cp7.png" alt="Image" class="img-fluid tm-gallery-img">
+                                    <img src="img/cp7.png" alt="Image" class="img-fluid tm-gallery-img lazy">
                                 </a>
                             </div>
                             <div class="tm-gallery-img-container">
                                 <a href="img/cp8.png" class="tm-gallery-img-link">
-                                    <img src="img/cp8.png" alt="Image" class="img-fluid tm-gallery-img">
+                                    <img src="img/cp8.png" alt="Image" class="img-fluid tm-gallery-img lazy">
                                 </a>
                             </div>
                             <div class="tm-gallery-img-container">
                                 <a href="img/cp9.png" class="tm-gallery-img-link">
-                                    <img src="img/cp9.png" alt="Image" class="img-fluid tm-gallery-img">
+                                    <img src="img/cp9.png" alt="Image" class="img-fluid tm-gallery-img lazy">
                                 </a>
                             </div>
                         </div>
@@ -186,6 +187,7 @@
         <!-- load JS files -->
         
         <script src="js/jquery-1.11.3.min.js"></script>             <!-- jQuery (https://jquery.com/download/) -->
+        <script src="js/jquery.lazyload.js"></script>
         <script src="js/tether.min.js"></script> <!-- Tether for Bootstrap, http://stackoverflow.com/questions/34567939/how-to-fix-the-error-error-bootstrap-tooltips-require-tether-http-github-h --> 
         <script src="js/bootstrap.min.js"></script>                 <!-- Bootstrap (http://v4-alpha.getbootstrap.com/) -->
         <script src="js/jquery.singlePageNav.min.js"></script>      <!-- Single Page Nav (https://github.com/ChrisWojcik/single-page-nav) -->
@@ -195,7 +197,12 @@
         <script>     
        
             $(document).ready(function(){
-
+            	
+            	$('img .lazy').lazyload({
+            		threshold: 200
+            	});
+            	
+            	
                 var mobileTopOffset = 54;
                 var desktopTopOffset = 80;
                 var topOffset = desktopTopOffset;
